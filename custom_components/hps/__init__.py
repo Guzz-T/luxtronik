@@ -80,7 +80,7 @@ def setup_hass_services(hass: HomeAssistant, config_entry: ConfigEntry):
         parameter = service.data.get(ATTR_PARAMETER)
         value = service.data.get(ATTR_VALUE)
         luxtronik = hass.data[DOMAIN]
-        update_immediately_after_write = config_entry.data[
+        update_immediately_after_write = config_entry[
             CONF_UPDATE_IMMEDIATELY_AFTER_WRITE
         ]
         luxtronik.write(
@@ -101,8 +101,9 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
         # Setup via UI. No need to continue yaml-based setup
         return True
     conf = config[DOMAIN]
-    return setup_internal(hass, conf, conf)
-
+    done = setup_internal(hass, conf, conf)
+    await hass.async_add_executor_job(setup_hass_services, hass, conf)
+    return done
 
 def setup_internal(hass, data, conf):
     """Set up the Luxtronik component."""
@@ -118,7 +119,7 @@ def setup_internal(hass, data, conf):
     #             use_legacy_sensor_ids)
 
     # Build Sensor names with local language:
-    lang = hass.config.language
+    lang = "DE"
     text_domestic_water = get_sensor_text(lang, "domestic_water")
     text_heating = get_sensor_text(lang, "heating")
     text_heatpump = get_sensor_text(lang, "heatpump")

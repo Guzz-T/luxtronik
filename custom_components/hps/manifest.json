@@ -1,6 +1,6 @@
 {
-  "domain": "luxtronik2",
-  "name": "Luxtronik",
+  "domain": "hps",
+  "name": "hps",
   "version": "2023.02.02",
   "integration_type": "hub",
   "config_flow": true,

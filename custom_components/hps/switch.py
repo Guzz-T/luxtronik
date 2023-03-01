@@ -35,7 +35,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up a Luxtronik sensor from ConfigEntry."""
     LOGGER.info(
-        "luxtronik2.switch.async_setup_entry ConfigType: %s", config_entry)
+        "hps.switch.async_setup_entry ConfigType: %s", config_entry)
     luxtronik: LuxtronikDevice = hass.data.get(DOMAIN)
     if not luxtronik:
         LOGGER.warning("switch.async_setup_entry no luxtronik!")

@@ -25,7 +25,7 @@ from homeassistant.helpers.entity import EntityCategory
 # endregion Imports
 
 # region Constants Main
-DOMAIN: Final = "luxtronik2"
+DOMAIN: Final = "hps"
 
 LOGGER: Final[logging.Logger] = logging.getLogger(__package__)
 

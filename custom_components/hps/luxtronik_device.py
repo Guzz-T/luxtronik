@@ -7,6 +7,7 @@ import time
 from homeassistant.core import HomeAssistant
 from homeassistant.util import Throttle
 from luxtronik import Luxtronik as Lux
+from luxtronik import Calculations, Parameters, Visibilities
 
 from .const import (
     CONF_CALCULATIONS,
@@ -37,6 +38,9 @@ class LuxtronikDevice:
         self._port = port
         self._lock_timeout_sec = lock_timeout_sec
         self._luxtronik = Lux(host, port, safe)
+        self._calculations = Calculations()
+        self._parameters = Parameters(safe = safe)
+        self._visibilities = Visibilities()
         self.update()
 
     @staticmethod
@@ -73,11 +77,11 @@ class LuxtronikDevice:
         sensor = None
         try:
             if group == CONF_PARAMETERS:
-                sensor = self._luxtronik.parameters.get(sensor_id)
+                sensor = self._parameters.get(sensor_id)
             if group == CONF_CALCULATIONS:
-                sensor = self._luxtronik.calculations.get(sensor_id)
+                sensor = self._calculations.get(sensor_id)
             if group == CONF_VISIBILITIES:
-                sensor = self._luxtronik.visibilities.get(sensor_id)
+                sensor = self._visibilities.get(sensor_id)
         except Exception as err:
             LOGGER.warning(f"Sensor id not found: {group}.{sensor_id}", err, exc_info=True)
         return sensor
@@ -213,8 +217,9 @@ class LuxtronikDevice:
                     value,
                     update_immediately_after_write,
                 )
-                self._luxtronik.parameters.set(parameter, value)
-                self._luxtronik.write()
+                parameters = Parameters()
+                parameters.set(parameter, value)
+                self._luxtronik.write(parameters)
             else:
                 LOGGER.warning(
                     "Couldn't write luxtronik parameter %s with value %s because of lock timeout %s",
@@ -247,7 +252,7 @@ class LuxtronikDevice:
         try:
             # TODO: change to "with"
             if self.lock.acquire(blocking=True, timeout=self._lock_timeout_sec):
-                self._luxtronik.read()
+                self._calculations, self._parameters, self_visibilities = self._luxtronik.read()
             else:
                 LOGGER.warning(
                     "Couldn't read luxtronik data because of lock timeout %s",

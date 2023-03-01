@@ -1,6 +1,6 @@
 {
   "preset_mode": {
-    "luxtronik2__heating": {
+    "hps__heating": {
       "second_heatsource": "Externe Energiequelle"
     }
   }

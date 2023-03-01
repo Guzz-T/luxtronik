@@ -100,7 +100,7 @@ async def async_setup_platform(
                     else sensor_cfg.get(CONF_FRIENDLY_NAME)
                 )
                 # if use_legacy_sensor_ids else None
-                entity_id = "luxtronik.{}".format(slugify(name))
+                entity_id = "hps.{}".format(slugify(name))
                 LOGGER.info(
                     "binary_sensor.async_setup_platform create entity_id: '%s'",
                     entity_id,

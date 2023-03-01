@@ -1,6 +1,6 @@
 {
   "state": {
-    "luxtronik2__status": {
+    "hps__status": {
       "heating": "Heizt",
       "hot water": "Brauchwasser",
       "swimming pool/solar": "Pool / Solar",
@@ -10,7 +10,7 @@
       "cooling": "K\u00fchlen",
       "no request": "Leerlauf (keine Anforderung)"
     },
-    "luxtronik2__status_line_1": {
+    "hps__status_line_1": {
       "heatpump running": "Die W\u00e4rmepumpe l\u00e4uft",
       "heatpump idle": "Die W\u00e4rmepumpe ist im Leerlauf",
       "heatpump coming": "Die W\u00e4rmepumpe startet",
@@ -21,12 +21,12 @@
       "witing on LIN connection": "Schreibt auf LIN Verbindung",
       "compressor heating up": "Der Kompressor heizt auf"
     },
-    "luxtronik2__status_line_2": {
+    "hps__status_line_2": {
       "since": "seit",
       "in": "in",
       "unknown": "Unbekannt"
     },
-    "luxtronik2__status_line_3": {
+    "hps__status_line_3": {
       "heating": "heizt",
       "defrost": "abtauen",
       "cooling": "k\u00fchlen",
@@ -44,7 +44,7 @@
       "domestic water external energy source": "Brauchwasser aus externer Energiequelle",
       "second heat generator 1 active": "zweiter W\u00e4rmeerzeuger 1 aktiv"
     },
-    "luxtronik2__error_reason": {
+    "hps__error_reason": {
       "701": "Niederdruckst\u00f6rung",
       "702": "Niederdrucksperre - RESET automatisch",
       "703": "Frostschutz",
@@ -120,7 +120,7 @@
       "793": "Schwerw. Inverter Fehler",
       "-1": "Unbekannter Fehler"
     },
-    "luxtronik2__switchoff_reason": {
+    "hps__switchoff_reason": {
       "0": "W\u00e4rmepumpe St\u00f6rung",
       "1": "Anlagen St\u00f6rung",
       "2": "Betriebsart Zweiter W\u00e4rmeerzeuger",
