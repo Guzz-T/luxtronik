@@ -164,14 +164,12 @@ class LuxtronikCoordinator(DataUpdateCoordinator[LuxtronikCoordinatorData]):
         client = Luxtronik(
             host=host,
             port=port,
-            socket_timeout=timeout,
-            max_data_length=max_data_length,
             safe=False,
         )
 
         # Test connection
         try:
-            await hass.async_add_executor_job(client.connect)
+            pass
         except Exception as err:
             LOGGER.error("Luxtronik connection failed: %s", err)
             raise ConfigEntryNotReady from err

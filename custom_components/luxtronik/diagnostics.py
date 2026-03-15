@@ -44,9 +44,9 @@ async def async_get_config_entry_diagnostics(
     diag_data = {
         "entry": entry_data,
         "devices": coordinator.device_infos,
-        "parameters": _dump_items(coordinator.data.parameters.parameters),
-        "calculations": _dump_items(coordinator.data.calculations.calculations),
-        "visibilities": _dump_items(coordinator.data.visibilities.visibilities),
+        "parameters": _dump_items(coordinator.data.parameters.data),
+        "calculations": _dump_items(coordinator.data.calculations.data),
+        "visibilities": _dump_items(coordinator.data.visibilities.data),
     }
     return diag_data
 

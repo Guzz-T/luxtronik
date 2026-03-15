@@ -49,15 +49,15 @@ def key_exists(
         )
 
         if group == "parameters":
-            items = coordinator.parameters.parameters.items()
+            definitions = coordinator.parameters.definitions
         elif group == "calculations":
-            items = coordinator.calculations.calculations.items()
+            definitions = coordinator.calculations.definitions
         elif group == "visibilities":
-            items = coordinator.visibilities.visibilities.items()
+            definitions = coordinator.visibilities.definitions
         else:
             return False
 
-        return any(item.name == sensor_id for _, item in items)
+        return any(sensor_id in d.names for d in definitions)
     except Exception as e:
         LOGGER.error("Error checking key existence: %s", e)
         return False
