@@ -474,17 +474,17 @@ class LuxParameter(StrEnum):
     # ? P1138_SWIMMING_POOL_ENERGY_INPUT: Final = "parameters.Unknown_Parameter_1138" -->
     P1139_COOLING_ENERGY_INPUT: Final = "parameters.Unknown_Parameter_1139"
     P1140_SECOND_HEAT_GENERATOR_AMOUNT_COUNTER: Final = (
-        "parameters.Unknown_Parameter_1140"
+        "parameters.SECOND_HEAT_GENERATOR_AMOUNT_COUNTER"
     )
     P1148_HEATING_TARGET_TEMP_ROOM_THERMOSTAT: Final = (
         "parameters.HEATING_TARGET_TEMP_ROOM_THERMOSTAT"
     )
-    P1158_POWER_LIMIT_SWITCH: Final = "parameters.Unknown_Parameter_1158"
-    P1159_POWER_LIMIT_VALUE: Final = "parameters.Unknown_Parameter_1159"
-    P1175_THERMAL_POWER_LIMIT_SWITCH: Final = "parameters.Unknown_Parameter_1175"
-    P1176_THERMAL_POWER_LIMIT_HEATING: Final = "parameters.Unknown_Parameter_1176"
-    P1177_THERMAL_POWER_LIMIT_WATER: Final = "parameters.Unknown_Parameter_1177"
-    P1178_THERMAL_POWER_LIMIT_COOLING: Final = "parameters.Unknown_Parameter_1178"
+    P1158_POWER_LIMIT_SWITCH: Final = "parameters.POWER_LIMIT_SWITCH"
+    P1159_POWER_LIMIT_VALUE: Final = "parameters.POWER_LIMIT_VALUE"
+    P1175_THERMAL_POWER_LIMIT_SWITCH: Final = "parameters.THERMAL_POWER_LIMIT_SWITCH"
+    P1176_THERMAL_POWER_LIMIT_HEATING: Final = "parameters.THERMAL_POWER_LIMIT_HEATING"
+    P1177_THERMAL_POWER_LIMIT_WATER: Final = "parameters.THERMAL_POWER_LIMIT_WATER"
+    P1178_THERMAL_POWER_LIMIT_COOLING: Final = "parameters.THERMAL_POWER_LIMIT_COOLING"
 
     P0731_AWAY_HEATING_STARTDATE: Final = "parameters.ID_SU_FstdHz"
     P0006_AWAY_HEATING_ENDDATE: Final = "parameters.ID_SU_FrkdHz"
@@ -700,7 +700,7 @@ class LuxVisibility(StrEnum):
         "visibilities.ID_Visi_Waermemenge_ZWE"
     )
     V0357_ELECTRICAL_POWER_LIMITATION_SWITCH: Final = (
-        "visibilities.Unknown_Parameter_357"
+        "visibilities.ELECTRICAL_POWER_LIMITATION_SWITCH"
     )
 
 
