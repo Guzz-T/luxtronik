@@ -426,7 +426,7 @@ SENSORS: list[descr] = [
         icon="mdi:delta",
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfTemperature.KELVIN,
-        factor=0.1,
+        factor=1.0,
         entity_registry_enabled_default=False,
     ),
     descr(
@@ -435,7 +435,7 @@ SENSORS: list[descr] = [
         icon="mdi:delta",
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfTemperature.KELVIN,
-        factor=0.1,
+        factor=1.0,
         entity_registry_enabled_default=False,
     ),
     descr(
@@ -444,7 +444,7 @@ SENSORS: list[descr] = [
         icon="mdi:delta",
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfTemperature.KELVIN,
-        factor=0.1,
+        factor=1.0,
         entity_registry_enabled_default=False,
     ),
     descr(
@@ -453,7 +453,7 @@ SENSORS: list[descr] = [
         icon="mdi:delta",
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfTemperature.KELVIN,
-        factor=0.1,
+        factor=1.0,
         entity_registry_enabled_default=False,
     ),
     descr(
@@ -630,7 +630,7 @@ SENSORS: list[descr] = [
         entity_category=EntityCategory.DIAGNOSTIC,
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         native_precision=2,
-        factor=0.01,
+        factor=1.0,
         # min_firmware_version_minor=FirmwareVersionMinor.minor_89,
         update_interval=UPDATE_INTERVAL_VERY_SLOW,
     ),
@@ -773,7 +773,7 @@ SENSORS: list[descr] = [
         entity_category=EntityCategory.DIAGNOSTIC,
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         native_precision=2,
-        factor=0.01,
+        factor=1.0,
         # min_firmware_version_minor=FirmwareVersionMinor.minor_88,
         update_interval=UPDATE_INTERVAL_VERY_SLOW,
     ),

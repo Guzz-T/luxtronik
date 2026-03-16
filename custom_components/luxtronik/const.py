@@ -465,14 +465,14 @@ class LuxParameter(StrEnum):
     )
     # "1060 ID_Waermemenge_Reset                                        ": "535051",
     # "1061 ID_Waermemenge_Reset_2                                      ": "0",
-    P1087_SILENT_MODE: Final = "parameters.Unknown_Parameter_1087"  # Silent mode On/Off
+    P1087_SILENT_MODE: Final = "parameters.SILENT_MODE"  # Silent mode On/Off
     P1119_LAST_DEFROST_TIMESTAMP: Final = (
-        "parameters.Unknown_Parameter_1119"  # 1685073431 -> 26.5.23 05:57
+        "parameters.LAST_DEFROST_TIMESTAMP"  # 1685073431 -> 26.5.23 05:57
     )
-    P1136_HEAT_ENERGY_INPUT: Final = "parameters.Unknown_Parameter_1136"
-    P1137_DHW_ENERGY_INPUT: Final = "parameters.Unknown_Parameter_1137"
+    P1136_HEAT_ENERGY_INPUT: Final = "parameters.HEAT_ENERGY_INPUT"
+    P1137_DHW_ENERGY_INPUT: Final = "parameters.DHW_ENERGY_INPUT"
     # ? P1138_SWIMMING_POOL_ENERGY_INPUT: Final = "parameters.Unknown_Parameter_1138" -->
-    P1139_COOLING_ENERGY_INPUT: Final = "parameters.Unknown_Parameter_1139"
+    P1139_COOLING_ENERGY_INPUT: Final = "parameters.COOLING_ENERGY_INPUT"
     P1140_SECOND_HEAT_GENERATOR_AMOUNT_COUNTER: Final = (
         "parameters.SECOND_HEAT_GENERATOR_AMOUNT_COUNTER"
     )
@@ -616,19 +616,19 @@ class LuxCalculation(StrEnum):
     C0227_ROOM_THERMOSTAT_TEMPERATURE: Final = "calculations.ID_WEB_RBE_RT_Ist"
     C0228_ROOM_THERMOSTAT_TEMPERATURE_TARGET: Final = "calculations.ID_WEB_RBE_RT_Soll"
     C0231_PUMP_FREQUENCY: Final = "calculations.ID_WEB_Freq_VD"
-    C0239_PUMP_FLOW_DELTA_TARGET: Final = "calculations.Unknown_Calculation_239"
+    C0239_PUMP_FLOW_DELTA_TARGET: Final = "calculations.VBO_Temp_Spread_Soll"
     # 239: Kelvin("VBO_Temp_Spread_Soll"), / 10, measurement, delta - ait_hup_vbo_calculated
-    C0240_PUMP_FLOW_DELTA: Final = "calculations.Unknown_Calculation_240"
+    C0240_PUMP_FLOW_DELTA: Final = "calculations.VBO_Temp_Spread_Ist"
     # 240: Kelvin("VBO_Temp_Spread_Ist"), / 10, measurement, delta - ait_vbo_delta
     # 241: Percent2("HUP_PWM"),
-    C0242_CIRCULATION_PUMP_DELTA_TARGET: Final = "calculations.Unknown_Calculation_242"
+    C0242_CIRCULATION_PUMP_DELTA_TARGET: Final = "calculations.HUP_Temp_Spread_Soll"
     # 242: Kelvin("HUP_Temp_Spread_Soll"), / 10, measurement, delta - ait_hup_delta_calculated
-    C0243_CIRCULATION_PUMP_DELTA: Final = "calculations.Unknown_Calculation_243"
+    C0243_CIRCULATION_PUMP_DELTA: Final = "calculations.HUP_Temp_Spread_Ist"
     # 243: Kelvin("HUP_Temp_Spread_Ist"), / 10, measurement, delta - ait_hup_delta
     # 254 Flow Rate
     C0257_CURRENT_HEAT_OUTPUT: Final = "calculations.Heat_Output"
     # 258 RBE Version
-    C0268_CURRENT_POWER_CONSUMPTION: Final = "calculations.Unknown_Calculation_268"
+    C0268_CURRENT_POWER_CONSUMPTION: Final = "calculations.AC_Power_Input"
 
 
 # endregion Lux calculations
