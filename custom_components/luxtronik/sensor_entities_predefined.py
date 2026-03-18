@@ -387,7 +387,7 @@ SENSORS: list[descr] = [
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         visibility=LV.V0248_ANALOG_OUT1,
         entity_registry_enabled_default=False,
-        factor=0.1,
+        factor=1.0,
     ),
     descr(
         key=SensorKey.ANALOG_OUT2,
@@ -398,7 +398,7 @@ SENSORS: list[descr] = [
         native_unit_of_measurement=UnitOfElectricPotential.VOLT,
         visibility=LV.V0249_ANALOG_OUT2,
         entity_registry_enabled_default=False,
-        factor=0.1,
+        factor=1.0,
     ),
     descr(
         key=SensorKey.CURRENT_HEAT_OUTPUT,
@@ -712,7 +712,7 @@ SENSORS: list[descr] = [
         entity_category=EntityCategory.DIAGNOSTIC,
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
         native_precision=2,
-        factor=0.01,
+        factor=1.0,
         # min_firmware_version_minor=FirmwareVersionMinor.minor_89,
         update_interval=UPDATE_INTERVAL_VERY_SLOW,
     ),
