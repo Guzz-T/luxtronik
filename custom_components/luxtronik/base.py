@@ -233,7 +233,7 @@ class LuxtronikEntity(CoordinatorEntity[LuxtronikCoordinator], RestoreEntity):
                 self._get_value(LC.C0012_FLOW_OUT_TEMPERATURE_TARGET)
             )
             flow_out = float(value)
-            hyst = float(self._get_value(LP.P0088_HEATING_HYSTERESIS)) * 0.1
+            hyst = float(self._get_value(LP.P0088_HEATING_HYSTERESIS))
 
             if self._get_value(LC.C0080_STATUS) == LuxOperationMode.heating:
                 return f"{flow_out + hyst - flow_out_target:.1f} {UnitOfTemperature.KELVIN}"
